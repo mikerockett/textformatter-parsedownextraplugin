@@ -1,8 +1,8 @@
 {
-    "title": "TextformatterParsedownExtraPlugin",
-    "version": "0.1.0",
+    "title": "Parsedown Extra Plugin",
+    "version": "1.0.0",
     "author": "Mike Rockett",
-    "summary": "TextformatterParsedownExtraPlugin extends Parsedown and Parsedown Extra to provide more options for HTML output. Recommended with TextformatterTypographer (after).",
+    "summary": "A fast markdown textformatter that uses Parsedown Extra Plugin, which extends Parsedown and Parsedown Extra to provide more options for HTML output.",
     "requires": "ProcessWire>=2.8.0",
     "license": "MIT",
     "hreflicense": "http://mit-license.org/"
