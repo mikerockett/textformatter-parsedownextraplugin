@@ -4,6 +4,6 @@
     "author": "Mike Rockett",
     "summary": "A fast markdown textformatter that uses Parsedown Extra Plugin, which extends Parsedown and Parsedown Extra to provide more options for HTML output.",
     "requires": "ProcessWire>=2.8.0",
-    "license": "MIT",
+    "license": "ISC",
     "hreflicense": "http://mit-license.org/"
 }

@@ -5,7 +5,7 @@
  *
  * @processwire 2.8+
  * @author: Mike Rockett
- * @license MIT
+ * @license ISC
  */
 
 class TextformatterParsedownExtraPlugin extends Textformatter
