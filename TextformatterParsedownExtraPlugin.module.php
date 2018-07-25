@@ -90,6 +90,17 @@ class TextformatterParsedownExtraPlugin extends Textformatter
             }
         }
 
+        $setterMappings = [
+            'setBreaksEnabled',
+            'setUrlsLinked',
+        ];
+
+        foreach ($setterMappings as $setting) {
+            if (isset($this->$setting)) {
+                $parser->$setting(filter_var($this->$setting, FILTER_VALIDATE_BOOLEAN));
+            }
+        }
+
         // Any remaining mappings may just be set as-is
         $configMappings = [
             'codeClass' => 'code_class',

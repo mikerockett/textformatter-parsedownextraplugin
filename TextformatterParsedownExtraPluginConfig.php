@@ -37,6 +37,8 @@ class TextformatterParsedownExtraPluginConfig extends ModuleConfig
             'footnoteBacklinkClass' => 'footnote-backref',
             'footnoteLinkText' => null,
             'footnoteBacklinkText' => '&#8617;',
+            'setUrlsLinked' => true,
+            'setBreaksEnabled' => false,
         ];
     }
 
@@ -73,6 +75,15 @@ class TextformatterParsedownExtraPluginConfig extends ModuleConfig
             'notes' => $this->_("**[Void elements](https://html.spec.whatwg.org/multipage/syntax.html#void-elements)** are those that do not require a closing/end tag because they never contain content.\nThe XHTML doctype uses ' />' as a suffix, and HTML5 uses '>'."),
             'collapsed' => Inputfield::collapsedNever,
             'autocheck' => true,
+        ]));
+
+        // Automatic Line Breaks
+        $fieldset->add($this->buildInputField('InputfieldCheckbox', [
+            'name+id' => 'setBreaksEnabled',
+            'label' => $this->_('Line Breaks'),
+            'label2' => $this->_('Enable automatic line breaks on lines without 2 trailing spaces'),
+            'collapsed' => Inputfield::collapsedNever,
+            'autocheck' => false,
         ]));
 
         // Predefined Abbreviations
@@ -135,6 +146,16 @@ class TextformatterParsedownExtraPluginConfig extends ModuleConfig
             'monospace' => true,
             'columnWidth' => 50,
         ]));
+
+        // URL Linking
+        $fieldset->add($this->buildInputField('InputfieldCheckbox', [
+            'name+id' => 'setUrlsLinked',
+            'label' => $this->_('URL Linking'),
+            'label2' => $this->_('Enable automatic linking of URLs'),
+            'collapsed' => Inputfield::collapsedNever,
+            'autocheck' => true,
+        ]));
+
 
         $inputfields->add($fieldset);
 
