@@ -18,13 +18,28 @@ class TextformatterParsedownExtraPlugin extends Textformatter
         parent::__construct();
     }
 
-    /**
-     * Textformatter formatValue
-     * @param $text
-     */
+  	/**
+  	 * Format the given text string, outside of specific Page or Field context.
+  	 * 
+  	 * @param string $str String is provided as a reference, so is modified directly (not returned). 
+  	 *
+  	 */
+  	public function format(&$str) 
+    {
+        $str = $this->parsedown($str); 
+    }
+    
+  	/**
+  	 * Format the given text string with Page and Field provided.
+  	 *
+  	 * @param Page $page
+  	 * @param Field $field
+  	 * @param string|mixed $value Value is provided as a reference, so is modified directly (not returned). 
+  	 *
+  	 */
     public function formatValue(Page $page, Field $field, &$value)
     {
-        $value = $this->parsedown($value);
+        $this->format($value);
     }
 
     /**

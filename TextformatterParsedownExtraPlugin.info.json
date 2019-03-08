@@ -1,6 +1,6 @@
 {
     "title": "Parsedown Extra Plugin",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "author": "Mike Rockett",
     "summary": "A fast markdown textformatter that uses Parsedown Extra Plugin, which extends Parsedown and Parsedown Extra to provide more options for HTML output.",
     "requires": "ProcessWire>=2.8.0",
